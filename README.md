@@ -21,8 +21,8 @@ Terminal + Text Editor (Notepad++, Sublime, etc.)
 # Usage
 1. Launch the application and follow the menu prompts
 2. Choose an option:
-     -📤 Send Email: Compose and send an email to another user
-     -📮 View Inbox: View emails in your inbox
+   - 📤 Send Email: Compose and send an email to another user
+    -📮 View Inbox: View emails in your inbox
     - 📨View Received Emails: View emails received by you
     - 🗑️Delete Email: Delete an email from your inbox
     - Exit: Quit the application
