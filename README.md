@@ -14,15 +14,15 @@ A simple Java console-based Email System where users can compose, send, view, an
 4. Run the application: java EmailSystem
 
 # 🔧 Requirements
--Java JDK 8 or later
--Any Java IDE (VS Code / IntelliJ / Eclipse) or
--Terminal + Text Editor (Notepad++, Sublime, etc.)
+- Java JDK 8 or later
+- Any Java IDE (VS Code / IntelliJ / Eclipse) or
+- Terminal + Text Editor (Notepad++, Sublime, etc.)
 
 # Usage
 1. Launch the application and follow the menu prompts
 2. Choose an option:
    - 📩 Send Email: Compose and send an email to another user
-   - -📮 View Inbox: View emails in your inbox
+   - 📮 View Inbox: View emails in your inbox
     - 📨View Received Emails: View emails received by you
     - 🗑️Delete Email: Delete an email from your inbox
     - 📤Exit: Quit the application
