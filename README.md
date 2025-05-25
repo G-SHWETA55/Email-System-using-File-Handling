@@ -14,9 +14,9 @@ A simple Java console-based Email System where users can compose, send, view, an
 4. Run the application: java EmailSystem
 
 # 🔧 Requirements
-Java JDK 8 or later
-Any Java IDE (VS Code / IntelliJ / Eclipse) or
-Terminal + Text Editor (Notepad++, Sublime, etc.)
+-Java JDK 8 or later
+-Any Java IDE (VS Code / IntelliJ / Eclipse) or
+-Terminal + Text Editor (Notepad++, Sublime, etc.)
 
 # Usage
 1. Launch the application and follow the menu prompts
