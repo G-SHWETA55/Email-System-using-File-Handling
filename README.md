@@ -9,6 +9,9 @@ A simple console-based email system implemented in Java.
 
 # How to Run
 1. Clone the repository: git clone https://github.com/G-SHWETA55/Email-System-using-File-Handling.git
+2. Navigate to the project directory: cd email-system
+3. Compile the Java code: javac *.java
+4. Run the application: java EmailSystem
 
 # Usage
 
@@ -22,8 +25,8 @@ A simple console-based email system implemented in Java.
 
 # Code Structure
 
-The code is organized into the following packages:
-
-- com.email: Main application package
-- com.email.dao: Data access object for email storage
-- com.email.model: Email model class
+The code is organized into four main classes:
+- Email: Represents an email with sender, receiver, subject, and body.
+- EmailDAO: Handles data access operations for emails, including saving, retrieving, and deleting emails.
+- EmailService: Provides business logic for email operations, such as sending, viewing, and deleting emails.
+- EmailSystem: The main class that runs the application and provides a menu-driven interface.
