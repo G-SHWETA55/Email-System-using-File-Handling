@@ -29,7 +29,7 @@ A simple Java console-based Email System where users can compose, send, view, an
 
 # Project Structure
 
-EmailSystem/
+EmailSystem/  
 ├── EmailSystem.java        # Main class (UI & Menu)  
 ├── Email.java              # Model class  
 ├── EmailDAO.java           # File handling (DAO layer)  
