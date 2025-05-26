@@ -1,6 +1,4 @@
-import java.io.*;
-import java.util.*;
-
+// DAO Class
 class EmailDAO {
     private static final String FILE_NAME = "emails.txt";
 
