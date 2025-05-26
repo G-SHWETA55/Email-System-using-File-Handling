@@ -39,4 +39,9 @@ EmailSystem/
 └── README.md               # Project documentation
 
 ![Structure](Structure.jpeg)
-# 
+
+# Output 
+-SEND EMAIL  
+![Send email](Send email.jpg)
+
+
