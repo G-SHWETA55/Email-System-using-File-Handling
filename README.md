@@ -38,5 +38,5 @@ EmailSystem/
 ├── images/                 # Screenshots  
 └── README.md               # Project documentation
 
-![Structure](images/Structure.png)
+![Structure](images/Structure.jpeg)
 # 
