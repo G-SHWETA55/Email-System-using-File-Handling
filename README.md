@@ -41,8 +41,12 @@ EmailSystem/
 ![Structure](Structure.jpeg)
 
 # Output 
--SEND EMAIL  
+  -SEND EMAIL  
   
 ![Send email](Send_email.jpg)
+
+  -VIEW EMAILS (SEND + RECEIVE)  
+
+![VIEW EMAILS (SEND + RECEIVE)](View_email.jpg)  
 
 
