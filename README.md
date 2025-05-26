@@ -53,7 +53,7 @@ EmailSystem/
 
 ![DELETE EMAILS](Delete_Email.jpg)  
 
-  -EXIT
+  -EXIT EMAIL
   
 ![EXIT EMAILS](Exit_email.jpg)
 
