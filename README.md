@@ -27,10 +27,15 @@ A simple Java console-based Email System where users can compose, send, view, an
     - 🗑️Delete Email: Delete an email from your inbox
     - 📤Exit: Quit the application
 
-# 👩🏻‍💻Code Structure
-The code is organized into four main classes:
+# Project Structure
 
-- Email: Represents an email with sender, receiver, subject, and body.
-- EmailDAO: Handles data access operations for emails, including saving, retrieving, and deleting emails.
-- EmailService: Provides business logic for email operations, such as sending, viewing, and deleting emails.
-- EmailSystem: The main class that runs the application and provides a menu-driven interface.
+EmailSystem/
+├── EmailSystem.java        # Main class (UI & Menu)
+├── Email.java              # Model class
+├── EmailDAO.java           # File handling (DAO layer)
+├── EmailService.java       # Business logic (Service layer)
+├── emails.txt              # Data file (auto-created)
+├── images/                 # Screenshots
+└── README.md               # Project documentation
+
+# 
