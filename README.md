@@ -49,4 +49,17 @@ EmailSystem/
 
 ![VIEW EMAILS (SEND + RECEIVE)](View_email.jpg)  
 
+  -DELETE EMAIL
 
+![DELETE EMAILS](Delete_email.jpg)  
+
+  -EXIT
+  
+![EXIT EMAILS](Exit_email.jpg)
+
+  -VIEW EMAILS (RECEIVE)
+
+  ![VIEW EMAILS(RECEIVE)](View_email(Receive).jpg)  
+
+
+  
