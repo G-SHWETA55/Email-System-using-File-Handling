@@ -51,7 +51,7 @@ EmailSystem/
 
   -DELETE EMAIL
 
-![DELETE EMAILS](Delete_email.jpg)  
+![DELETE EMAILS](Delete_Email.jpg)  
 
   -EXIT
   
