@@ -30,12 +30,12 @@ A simple Java console-based Email System where users can compose, send, view, an
 # Project Structure
 
 EmailSystem/
-├── EmailSystem.java        # Main class (UI & Menu)
-├── Email.java              # Model class
-├── EmailDAO.java           # File handling (DAO layer)
-├── EmailService.java       # Business logic (Service layer)
-├── emails.txt              # Data file (auto-created)
-├── images/                 # Screenshots
+├── EmailSystem.java        # Main class (UI & Menu)  
+├── Email.java              # Model class  
+├── EmailDAO.java           # File handling (DAO layer)  
+├── EmailService.java       # Business logic (Service layer)  
+├── emails.txt              # Data file (auto-created)  
+├── images/                 # Screenshots  
 └── README.md               # Project documentation
 
 # 
