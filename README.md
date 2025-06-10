@@ -19,9 +19,9 @@ A simple Java console-based Email System where users can compose, send, view, an
 - Terminal + Text Editor (Notepad++, Sublime, etc.)
 
 # ✅ Strengths of This System
-•	Modular design makes it easy to maintain or expand
-•	Lightweight, no external databases required
-•	Teaches key OOP principles (encapsulation, abstraction, separation of concerns)
+•	Modular design makes it easy to maintain or expand 
+•	Lightweight, no external databases required 
+•	Teaches key OOP principles (encapsulation, abstraction, separation of concerns) 
 
 # Usage
 1. Launch the application and follow the menu prompts
