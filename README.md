@@ -104,9 +104,9 @@ All emails are stored as lines in text files (`sent.txt` and `inbox.txt`), simul
 ![Structure](Structure.jpeg)
 
 # Output 
-  -SEND EMAIL  
+  -Composing EMAIL  
   
-![Send email](Send_email.jpg)
+![Compose email](Compose_Email.jpg)
 
   -VIEW EMAILS (SEND + RECEIVE)  
 
