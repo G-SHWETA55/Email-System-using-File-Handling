@@ -108,21 +108,23 @@ All emails are stored as lines in text files (`sent.txt` and `inbox.txt`), simul
   
 ![Compose email](https://github.com/G-SHWETA55/Email-System-using-File-Handling/blob/main/Ouput/Compose_Email.jpg)
 
-  -VIEW EMAILS (SEND + RECEIVE)  
+  -View Inbox       
 
-![VIEW EMAILS (SEND + RECEIVE)](View_email.jpg)  
+![VIEW INBOX](https://github.com/G-SHWETA55/Email-System-using-File-Handling/blob/main/Ouput/View_Inbox.jpg)  
 
-  -DELETE EMAIL
+  -VIEW SENT EMAIL
 
-![DELETE EMAILS](Delete_Email.jpg)  
+  ![VIEW SENT EMAIL](https://github.com/G-SHWETA55/Email-System-using-File-Handling/blob/main/Ouput/View_Sent_Email.jpg)  
+
+  -DELETE SENT EMAIL
+
+![Delete_SENT_EMAIL](https://github.com/G-SHWETA55/Email-System-using-File-Handling/blob/main/Ouput/Delete_Sent_Email.jpg)  
 
   -EXIT EMAIL
   
-![EXIT EMAILS](Exit_email.jpg)
+![EXIT EMAILS](https://github.com/G-SHWETA55/Email-System-using-File-Handling/blob/main/Ouput/Exit.jpg)
 
-  -VIEW EMAILS (RECEIVE)
 
-  ![VIEW EMAILS(RECEIVE)](View_email(Receive).jpg)  
 
 
   
