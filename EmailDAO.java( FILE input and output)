@@ -1,78 +1,95 @@
-// DAO Class
+//Email DAO Class
 class EmailDAO {
-    private static final String FILE_NAME = "emails.txt";
+    private final String SENT_FILE = "sent.txt";
+    private final String INBOX_FILE = "inbox.txt";
 
-    public EmailDAO() {
-        File file = new File(FILE_NAME);
-        try {
-            if (!file.exists()) file.createNewFile();
+    // Sends email: stores in both sent.txt and inbox.txt
+    public void sendEmail(Email email) {
+        writeToFile(SENT_FILE, email.toString());
+        writeToFile(INBOX_FILE, email.toString());
+    }
+
+    // Displays all sent emails by a particular sender
+    public void viewSent(String sender) {
+        System.out.println("----- Sent Emails -----");
+        readFromFile(SENT_FILE, sender, true);
+    }
+
+    // Displays inbox (received emails) for a receiver
+    public void viewInbox(String receiver) {
+        System.out.println("----- Inbox -----");
+        readFromFile(INBOX_FILE, receiver, false);
+    }
+
+    // Deletes a sent email matching subject and sender
+    public void deleteSent(String sender, String subject) {
+        deleteFromFile(SENT_FILE, sender, subject);
+    }
+
+    // Writes a line to the given file
+    private void writeToFile(String fileName, String content) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true))) {
+            bw.write(content);
+            bw.newLine();
         } catch (IOException e) {
-            System.out.println("Error creating file: " + e.getMessage());
+            System.out.println("Error writing to file: " + fileName);
         }
     }
 
-    public void saveEmail(Email email) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
-            writer.write(email.formatForFile());
-            writer.newLine();
-        } catch (IOException e) {
-            System.out.println("Error saving email: " + e.getMessage());
-        }
-    }
-
-    public List<Email> getEmailsByUser(String user) {
-        List<Email> list = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+    // Reads and displays emails from file based on sender/receiver
+    private void readFromFile(String fileName, String user, boolean isSender) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
-            while ((line = reader.readLine()) != null) {
-                Email email = Email.parseFromFile(line);
-                if (email != null && (email.getSender().equalsIgnoreCase(user) || email.getReceiver().equalsIgnoreCase(user))) {
-                    list.add(email);
+            boolean found = false;
+            while ((line = br.readLine()) != null) {
+                Email email = Email.fromString(line);
+                if ((isSender && email.sender.equals(user)) || (!isSender && email.receiver.equals(user))) {
+                    email.display();
+                    found = true;
                 }
             }
-        } catch (IOException e) {
-            System.out.println("Error reading emails: " + e.getMessage());
-        }
-        return list;
-    }
-
-    public List<Email> getEmailsReceivedByUser(String receiver) {
-        List<Email> list = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                Email email = Email.parseFromFile(line);
-                if (email != null && email.getReceiver().equalsIgnoreCase(receiver)) {
-                    list.add(email);
-                }
+            if (!found) {
+                System.out.println("No emails found.");
             }
         } catch (IOException e) {
-            System.out.println("Error reading receiver inbox: " + e.getMessage());
+            System.out.println("Error reading file: " + fileName);
         }
-        return list;
     }
 
-    public void deleteEmail(Email target) {
-        List<Email> all = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+    // Deletes matching entry from file and updates original
+    private void deleteFromFile(String fileName, String user, String subject) {
+        File inputFile = new File(fileName);
+        File tempFile = new File("temp.txt");
+
+        boolean deleted = false;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))) {
+
             String line;
             while ((line = reader.readLine()) != null) {
-                Email email = Email.parseFromFile(line);
-                if (email != null && !email.formatForFile().equals(target.formatForFile())) {
-                    all.add(email);
+                Email email = Email.fromString(line);
+                if (email.sender.equals(user) && email.subject.equalsIgnoreCase(subject)) {
+                    deleted = true;
+                    continue; // Skip this line
                 }
-            }
-        } catch (IOException e) {
-            System.out.println("Error reading for delete: " + e.getMessage());
-        }
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
-            for (Email email : all) {
-                writer.write(email.formatForFile());
+                writer.write(line);
                 writer.newLine();
             }
+
+            if (deleted) {
+                System.out.println("Email deleted successfully.");
+            } else {
+                System.out.println("Email not found.");
+            }
+
         } catch (IOException e) {
-            System.out.println("Error writing after delete: " + e.getMessage());
+            System.out.println("Error deleting from file.");
+        }
+
+        // Replace old file with updated file
+        if (!inputFile.delete() || !tempFile.renameTo(inputFile)) {
+            System.out.println("Error updating file after deletion.");
         }
     }
 }
