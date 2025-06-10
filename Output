@@ -1,5 +1,2 @@
-mkdir Output
-touch Output/.gitkeep
-git add .
-git commit -m "Add new folder"
-git push
+git clone https://github.com/G-SHWETA55/Email-System-using-File-Handling.git
+cd Email-System-using-File-Handling
