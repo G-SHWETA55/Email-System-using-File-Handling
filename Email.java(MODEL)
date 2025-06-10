@@ -1,24 +1,37 @@
-package model;
+class Email {
+    String sender;
+    String receiver;
+    String subject;
+    String message;
+    String timestamp;
 
-public class Email {
-    private String sender;
-    private String receiver;
-    private String subject;
-    private String body;
-
-    public Email(String sender, String receiver, String subject, String body) {
+    public Email(String sender, String receiver, String subject, String message) {
         this.sender = sender;
         this.receiver = receiver;
         this.subject = subject;
-        this.body = body;
+        this.message = message;
+        this.timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 
-    public String formatForFile() {
-        return sender + "|" + receiver + "|" + subject + "|" + body.replace("\n", "\\n");
+    // Converts Email object to a single-line string for storage
+    @Override
+    public String toString() {
+        return sender + "|" + receiver + "|" + subject + "|" + message + "|" + timestamp;
     }
 
-    public static Email parseFromFile(String line) {
-        String[] parts = line.split("\\|");
-        return new Email(parts[0], parts[1], parts[2], parts[3].replace("\\n", "\n"));
+    // Reconstructs Email object from stored line
+    public static Email fromString(String data) {
+        String[] parts = data.split("\\|");
+        return new Email(parts[0], parts[1], parts[2], parts[3]);
+    }
+
+    // Displays email in readable format
+    public void display() {
+        System.out.println("From    : " + sender);
+        System.out.println("To      : " + receiver);
+        System.out.println("Subject : " + subject);
+        System.out.println("Message : " + message);
+        System.out.println("Time    : " + timestamp);
+        System.out.println("--------------------------------------------------");
     }
 }
