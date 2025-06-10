@@ -94,11 +94,11 @@ All emails are stored as lines in text files (`sent.txt` and `inbox.txt`), simul
     - 📤Exit: Quit the application
 
 ## 📁 Project Structure
-    📦 ConsoleEmailSystem
-├── 📄 EmailSystemApp.java # Main entry point, contains the user interface (menu-driven)
-├── 📄 inbox.txt # File used to store received emails
-├── 📄 sent.txt # File used to store sent emails
-└── 📄 README.md # Project documentation (this file)
+    📦 ConsoleEmailSystem   
+├── 📄 EmailSystemApp.java # Main entry point, contains the user interface (menu-driven)     
+├── 📄 inbox.txt # File used to store received emails    
+├── 📄 sent.txt # File used to store sent emails      
+└── 📄 README.md # Project documentation (this file)     
 
 
 ![Structure](Structure.jpeg)
